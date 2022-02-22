@@ -1,0 +1,52 @@
+
+<table  class="table table-striped">
+    <thead>
+        <tr>
+            <th>EmpID</th>
+            <th>EmpName</th>
+            <th>Department</th>
+            <th>Gender</th>
+            <th>DOB</th>
+            <th>IDProof</th>
+            <th>IDProofNumber</th>
+            <th>Phone</th>
+            <th>BloodGroup</th>
+            <th>emailID</th>
+            <th>EmpAddress</th>
+            <th style="text-align: center;">Edit</th>
+            <th style="text-align: center;">Delete</th>
+            <th style="text-align: center;" >Print</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let dataItem of Employee">
+            <td>{{dataItem.EmpID}}</td>
+            <td>{{dataItem.EmpName}}</td>
+            <td>{{dataItem.Department}}</td>
+            <td>{{dataItem.Gender}}</td>
+            <td>{{dataItem.DOB}}</td>
+            <td>{{dataItem.IDProofType}}</td>
+            <td>{{dataItem.IDProofNumber}}</td>
+            <td>{{dataItem.Phone}}</td>
+            <td>{{dataItem.BloodGroup}}</td>
+            <td>{{dataItem.emailID}}</td>
+            <td>{{dataItem.EmpAddress}}</td>
+            <td>
+                <button type="button" mat-button [routerLink]="['/UpdateEmployeeComponent']" [queryParams]="{prop: dataItem.EmpID}">
+                    <mat-icon>create</mat-icon>
+                </button>
+            </td>
+            <td>
+                <button type="button" mat-button (click)="deleteClick(dataItem.EmpID)" > 
+                    <mat-icon>delete</mat-icon>
+                </button>
+            </td>
+            <td style="align-items: center;" >
+                <button type="button" mat-button (click)="printClick(dataItem.EmpID)" > 
+                    <mat-icon>print</mat-icon>
+                </button>
+            </td>
+
+        </tr>
+    </tbody>
+</table>    
