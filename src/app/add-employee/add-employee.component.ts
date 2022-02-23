@@ -21,7 +21,7 @@ export class AddEmployeeComponent implements OnInit
     })
   }
 
-  Department=[ {name:'HR'},{name:'R & D'},{name:'Marketing'}];
+  Department:any=[];
   Dep:string='';
 
   Gender=[ {name:'Male'},{name:'Female'},{name:'Others'}];
@@ -47,6 +47,9 @@ export class AddEmployeeComponent implements OnInit
 
     ngOnInit(): void{
       this.PhotoFilePath=this.service.photoUrl+this.PhotoName;
+      this.service.getAllDepartmentNames().subscribe((data:any)=>{
+        this.Department=data;
+      });
     }
   
 }

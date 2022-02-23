@@ -26,7 +26,7 @@ export class UpdateEmployeeComponent implements OnInit {
 
   PhotoURL="http://localhost:57823/Photos/";
 
-  Department=[ {name:'HR'},{name:'R & D'},{name:'Marketing'}];
+  Department:any=[]; 
   Dep:string='';
   
   Gender=[ {name:'Male'},{name:'Female'},{name:'Others'}];
@@ -58,7 +58,8 @@ export class UpdateEmployeeComponent implements OnInit {
     ) { }
 
     OnSubmit(val: any)
-    {   
+    { 
+        val.EmpID=this.EmpID;  
         val.PhotoName=this.PhotoName; 
         console.log(val);
         this.service.updateEmployee(val).subscribe(result=>{alert(result.toString())});
@@ -71,7 +72,10 @@ export class UpdateEmployeeComponent implements OnInit {
       this.service.getEmp(this.EmpID.toString()).subscribe((val)=>{
         this.employee=val;
         console.log(this.employee);
-      })  
+      });
+      this.service.getAllDepartmentNames().subscribe((data:any)=>{
+        this.Department=data;
+      });
     }
 
 }
