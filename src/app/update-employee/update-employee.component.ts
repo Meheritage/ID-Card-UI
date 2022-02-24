@@ -47,9 +47,8 @@ export class UpdateEmployeeComponent implements OnInit {
   EmpAddress: string='';
   PhotoName: string="Anonymous.png";
   PhotoFilePath:string='';
-  employee: any ;
+  employee:any;
   
- 
   constructor(
     private service:SharedService,
     private activatedRoute: ActivatedRoute,
@@ -57,15 +56,23 @@ export class UpdateEmployeeComponent implements OnInit {
     public router: Router
     ) { }
 
+    onclick(val:any){
+      if(this.PhotoName=="Anonymous.png"){
+        return this.PhotoName=val;
+      }
+
+    }
+
     OnSubmit(val: any)
     { 
-        val.EmpID=this.EmpID;  
-        val.PhotoName=this.PhotoName; 
+        val.PhotoName=this.PhotoName;
+        val.EmpID=this.EmpID;   
         console.log(val);
         this.service.updateEmployee(val).subscribe(result=>{alert(result.toString())});
    }
 
     ngOnInit(){
+
       this.activatedRoute.queryParams.subscribe(params => {
         this.EmpID = params['prop']
       });
@@ -78,4 +85,4 @@ export class UpdateEmployeeComponent implements OnInit {
       });
     }
 
-}
+} 
