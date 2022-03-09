@@ -1,0 +1,84 @@
+.colo{
+    background-color:white;
+}
+
+.regbutton{
+    background-image: IDCardPath;
+    left: 700px;
+    top: 320px;
+    width:150px;
+    height:50px;
+    font-size:22px;
+    background-color: rgb(13, 18, 99);
+    color: rgb(255, 251, 251);
+    position: absolute;
+    
+}
+
+.regbutton:hover{
+    background-color: red;
+    color: white;
+}
+
+.clfi{
+    position: relative;
+    top: 7px ;
+}
+
+.clsi{
+    position: absolute;
+    left: 26.5px;
+    top: 130px;
+
+}
+.empsty{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size:medium;
+    color: rgb(0, 0, 0);
+    position:absolute;
+    top: 207px;
+    left: 280px;
+}
+.depsty{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size:medium;
+    position: absolute;
+    color: black;
+    top: 245px;
+    left: 280px;
+}
+.bgsty{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size:medium;
+    position: absolute;
+    color: black;
+    top: 516px;
+    left: 120px;
+}
+.phsty{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size:medium;
+    position: absolute;
+    color: black;
+    top: 481.7px;
+    left: 120px;
+}
+.dobsty{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size:medium;
+    position: absolute;
+    color: black;
+    top: 447px;
+    left: 120px;
+}
+.addsty{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size:medium;
+    position: absolute;
+    color: black;
+    top: 552px;
+    left: 120px;
+    max-width: 400px;
+}
+
+

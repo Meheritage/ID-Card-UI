@@ -1,6 +1,6 @@
 <form #frm="ngForm" (ngSubmit)="OnSubmit(frm.value)" *ngFor="let dataItem of employee">
    
-    <mat-form-field style="width:30%;margin-left:10%;margin-top: 10%;">
+    <mat-form-field style="width:30%;margin-left:10%;margin-top: 5%;">
       <mat-label >Enter Your Name</mat-label>
       <input matInput type="text" minlength="4" maxlength="30" name="EmpName" pattern="^[a-zA-z]+([\s][a-zA-Z]+)*$" #name="ngModel" [(ngModel)]="dataItem.EmpName" required>
       <small class="form-text text-muted" *ngIf="name.touched && !name.valid">This field is required*</small>

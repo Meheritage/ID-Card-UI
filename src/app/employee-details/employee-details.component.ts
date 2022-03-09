@@ -1,5 +1,6 @@
-import { Component, OnInit} from '@angular/core';
+import { Component, OnInit, ViewChild,ElementRef} from '@angular/core';
 import { SharedService } from '../shared.service';
+import { jsPDF } from "jspdf";
 
 @Component({
   selector: 'app-employee-details',
@@ -7,6 +8,7 @@ import { SharedService } from '../shared.service';
   styleUrls: ['./employee-details.component.css']
 })
 export class EmployeeDetailsComponent implements OnInit {
+  photopath: any;
 
   constructor(private service:SharedService) { }
 
@@ -25,15 +27,9 @@ export class EmployeeDetailsComponent implements OnInit {
 
   }
 
-  printClick(EmpID:string){
-
-  }
-
   refreshDepList(){
     this.service.getEmpList().subscribe(data=>{
-       this.Employee=data;
-    }
-    )
+       this.Employee=data; })
   }
 
 }
