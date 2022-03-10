@@ -5,11 +5,14 @@ import { EmployeeDetailsComponent } from './employee-details/employee-details.co
 import { AddEmployeeComponent } from './add-employee/add-employee.component';
 import { UpdateEmployeeComponent } from './update-employee/update-employee.component';
 import { DepartmentComponent } from './department/department.component';
+import { LogoutComponent } from './logout/logout.component';
+
 const routes: Routes = [
   { path: 'EmployeeDetailsComponent', component: EmployeeDetailsComponent },
   { path: 'AddEmployeeComponent', component: AddEmployeeComponent },
   { path: 'UpdateEmployeeComponent', component: UpdateEmployeeComponent },
-  { path: 'DepartmentComponent', component: DepartmentComponent }
+  { path: 'DepartmentComponent', component: DepartmentComponent },
+  { path: 'LogoutComponent', component: LogoutComponent }
 ];
 
 @NgModule({

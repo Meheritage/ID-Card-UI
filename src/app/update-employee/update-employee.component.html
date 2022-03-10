@@ -1,33 +1,35 @@
 <form #frm="ngForm" (ngSubmit)="OnSubmit(frm.value)" *ngFor="let dataItem of employee">
-   
-    <mat-form-field style="width:30%;margin-left:10%;margin-top: 10%;">
-      <mat-label >Enter Your Name</mat-label>
-      <input matInput type="text" minlength="4" maxlength="30" name="EmpName" pattern="^[a-zA-z]+([\s][a-zA-Z]+)*$" #name="ngModel" [(ngModel)]="dataItem.EmpName" required>
+
+   <mat-form-field style="width:30%;margin-left:10%;margin-top: 10%;">
+      <mat-label>Enter Your Name</mat-label>
+      <input matInput type="text" minlength="4" maxlength="30" name="EmpName" pattern="^[a-zA-z]+([\s][a-zA-Z]+)*$"
+         #name="ngModel" [(ngModel)]="dataItem.EmpName" required>
       <small class="form-text text-muted" *ngIf="name.touched && !name.valid">This field is required*</small>
       <div *ngIf="name.errors?.['minlength']">
-        Name must be at least 4 characters long.
+         Name must be at least 4 characters long.
       </div>
       <div *ngIf="name.errors?.['pattern']">Name must be in Charecters.</div>
    </mat-form-field>
 
    <mat-form-field style="width:30%;margin-left:10%">
-     <mat-label > Department</mat-label>
-     <mat-select [(ngModel)]="dataItem.Department" name="Department" #department="ngModel" required>
-       <mat-option *ngFor="let n of Department" value={{n.Name}} >{{ n.Name }}</mat-option>
-     </mat-select>
-     <small class="form-text text-muted" *ngIf="department.touched && !department.valid ">This field is required*</small>
-   </mat-form-field>  
+      <mat-label> Department</mat-label>
+      <mat-select [(ngModel)]="dataItem.Department" name="Department" #department="ngModel" required>
+         <mat-option *ngFor="let n of Department" value={{n.Name}}>{{ n.Name }}</mat-option>
+      </mat-select>
+      <small class="form-text text-muted" *ngIf="department.touched && !department.valid ">This field is
+         required*</small>
+   </mat-form-field>
 
    <br>
 
    <mat-form-field style="width:30%;margin-left:10%">
-      <mat-label > Gender</mat-label>
+      <mat-label> Gender</mat-label>
       <mat-select [(ngModel)]="dataItem.Gender" name="Gender" #gender="ngModel" required>
-        <mat-option *ngFor="let n of Gender" value={{n.name}} >{{ n.name }}</mat-option>
+         <mat-option *ngFor="let n of Gender" value={{n.name}}>{{ n.name }}</mat-option>
       </mat-select>
       <small class="form-text text-muted" *ngIf="gender.touched && !gender.valid">This field is required*</small>
    </mat-form-field>
- 
+
    <mat-form-field style="width:30%;margin-left:10%">
       <mat-label>Date Of Birth</mat-label>
       <input matInput [matDatepicker]="picker" name="DOB" #dob="ngModel" [(ngModel)]="dataItem.DOB" required>
@@ -35,65 +37,66 @@
       <mat-datepicker #picker></mat-datepicker>
       <small class="form-text text-muted" *ngIf="dob.touched && !dob.valid">This field is required*</small>
    </mat-form-field>
-  
+
    <br>
-  
+
    <mat-form-field style="width:30%;margin-left:10%">
-      <mat-label >IDProof</mat-label>
+      <mat-label>IDProof</mat-label>
       <mat-select [(ngModel)]="dataItem.IDProofType" name="IDProofType" #idproof="ngModel" required>
-        <mat-option *ngFor="let n of IDProofType" value={{n.name}} >{{ n.name }}</mat-option>
+         <mat-option *ngFor="let n of IDProofType" value={{n.name}}>{{ n.name }}</mat-option>
       </mat-select>
       <small class="form-text text-muted" *ngIf="idproof.touched && !idproof.valid">This field is required*</small>
    </mat-form-field>
-  
+
    <mat-form-field style="width:30%;margin-left:10%">
-      <mat-label >IDProofDetail</mat-label>
+      <mat-label>IDProofDetail</mat-label>
       <input matInput name="IDProofNumber" #idproofnumber="ngModel" [(ngModel)]="dataItem.IDProofNumber" required>
-      <small class="form-text text-muted" *ngIf="idproofnumber.touched && !idproofnumber.valid">This field is required*</small>
+      <small class="form-text text-muted" *ngIf="idproofnumber.touched && !idproofnumber.valid">This field is
+         required*</small>
    </mat-form-field>
 
    <br>
 
    <mat-form-field style="width:30%;margin-left:10%">
-      <mat-label >Phone</mat-label>
-      <input matInput name="Phone"   pattern="^[0-9]{10}$" #Phone="ngModel" [(ngModel)]="dataItem.Phone" required>
+      <mat-label>Phone</mat-label>
+      <input matInput name="Phone" pattern="^[0-9]{10}$" #Phone="ngModel" [(ngModel)]="dataItem.Phone" required>
       <small class="form-text text-muted" *ngIf="Phone.touched && !Phone.valid">This field is required*</small>
       <div *ngIf="Phone.errors?.['pattern']">Enter a valid Mobile No.</div>
-   </mat-form-field>    
+   </mat-form-field>
 
    <mat-form-field style="width:30%;margin-left:10%">
-      <mat-label >BloodGroup</mat-label>
+      <mat-label>BloodGroup</mat-label>
       <mat-select [(ngModel)]="dataItem.BloodGroup" name="BloodGroup" #bloodgroup="ngModel" required>
-        <mat-option *ngFor="let n of BloodGroup" value={{n.name}} >{{ n.name }}</mat-option>
+         <mat-option *ngFor="let n of BloodGroup" value={{n.name}}>{{ n.name }}</mat-option>
       </mat-select>
-      <small class="form-text text-muted" *ngIf="bloodgroup.touched && !bloodgroup.valid">This field is required*</small>
+      <small class="form-text text-muted" *ngIf="bloodgroup.touched && !bloodgroup.valid">This field is
+         required*</small>
    </mat-form-field>
-   
+
    <br>
 
    <mat-form-field style="width:30%;margin-left:10%">
-        <mat-label>Enter your email</mat-label>
-        <input matInput placeholder="abc@email.com" [(ngModel)]="dataItem.emailID" name="emailID" email #email="ngModel" required>
-        <small class="form-text text-muted" *ngIf="email.touched && !email.valid">This field is required*</small>
-       <span *ngIf="email.invalid && email.touched">Enter a valid Email</span>
+      <mat-label>Enter your email</mat-label>
+      <input matInput placeholder="abc@email.com" [(ngModel)]="dataItem.emailID" name="emailID" email #email="ngModel"
+         required>
+      <small class="form-text text-muted" *ngIf="email.touched && !email.valid">This field is required*</small>
+      <span *ngIf="email.invalid && email.touched">Enter a valid Email</span>
    </mat-form-field>
-   
+
    <mat-form-field style="width:30%;margin-left:10%">
-      <mat-label >Enter Your Address</mat-label>
-      <textarea matInput name="EmpAddress" [(ngModel)]="dataItem.EmpAddress" #address="ngModel" required ></textarea>
+      <mat-label>Enter Your Address</mat-label>
+      <textarea matInput name="EmpAddress" [(ngModel)]="dataItem.EmpAddress" #address="ngModel" required></textarea>
       <small class="form-text text-muted" *ngIf="address.touched && !address.valid">This field is required*</small>
    </mat-form-field>
-  
-   <br>
- 
-   <mat-label style="width:150px;margin-left:10%;align-items: center;">UPLOAD YOUR PICTURE</mat-label><br>
-   <img style="margin-left: 10%;" [src]="PhotoFilePath||PhotoURL+dataItem.PhotoName"  height="150px" width="150px" >
-    <input style="width:30%;margin-left:2%" type="file" (change)="OnFileSelected($event)" > 
-   <br>
-   
-   <button  type="submit" name="save" class="regbutton" mat-raised-button [disabled]="!frm.valid" (click)="onclick(dataItem.PhotoName)">Update</button>
-   
-</form>
 
-      
-   
+   <br>
+
+   <mat-label style="width:150px;margin-left:10%;align-items: center;">UPLOAD YOUR PICTURE</mat-label><br>
+   <img style="margin-left: 10%;" [src]="PhotoFilePath||PhotoURL+dataItem.PhotoName" height="150px" width="150px">
+   <input style="width:30%;margin-left:2%" type="file" (change)="OnFileSelected($event)">
+   <br>
+
+   <button type="submit" name="save" class="regbutton" mat-raised-button [disabled]="!frm.valid"
+      (click)="onclick(dataItem.PhotoName)">Update</button>
+
+</form>
