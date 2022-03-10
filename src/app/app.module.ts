@@ -24,6 +24,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 import { AddEmployeeComponent } from './add-employee/add-employee.component';
 import { UpdateEmployeeComponent } from './update-employee/update-employee.component';
+import { DepartmentComponent } from './department/department.component';
+import { UpdateDepartmentComponent } from './update-department/update-department.component';
 
 const routes: Routes = [
    
@@ -33,7 +35,9 @@ const routes: Routes = [
     AppComponent,
     EmployeeDetailsComponent,
     AddEmployeeComponent,
-    UpdateEmployeeComponent
+    UpdateEmployeeComponent,
+    DepartmentComponent,
+    UpdateDepartmentComponent
   ],
   imports: [
     BrowserModule,
