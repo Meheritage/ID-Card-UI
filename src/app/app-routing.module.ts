@@ -12,7 +12,7 @@ const routes: Routes = [
   { path: 'AddEmployeeComponent', component: AddEmployeeComponent },
   { path: 'UpdateEmployeeComponent', component: UpdateEmployeeComponent },
   { path: 'DepartmentComponent', component: DepartmentComponent },
-  { path: 'LogoutComponent', component: LogoutComponent }
+  { path: 'LogoutComponent', component: LogoutComponent },
   {path:'PrintComponent',component:PrintComponent}
 ];
 
