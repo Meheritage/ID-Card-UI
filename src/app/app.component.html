@@ -1,35 +1,44 @@
+<mat-toolbar style="background-color: brown;" class="mat-elevation-z5">
+  <mat-toolbar-row>
+    <span>My App</span>
+    <span class="example-spacer"></span>
+    <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+      <mat-icon>settings</mat-icon>
+    </button>
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+      <mat-icon>home</mat-icon>
+    </button>
+  </mat-toolbar-row>
+</mat-toolbar>
 
-  
-    <mat-toolbar style="background-color: brown;" class="mat-elevation-z5">
-      <mat-toolbar-row>
-      <span>My App</span>
-      <span class="example-spacer"></span>
-      <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
-        <mat-icon>settings</mat-icon>
-      </button>
-      <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
-        <mat-icon>home</mat-icon>
-      </button>
-    </mat-toolbar-row>
-    </mat-toolbar>
-  
-  
+
 <p>
   <mat-sidenav-container>
     <mat-sidenav mode="side" opened>
-    <mat-nav-list style="width: 200px;">
-      <a mat-list-item  style="height: 60px;"><mat-icon>dashboard</mat-icon>Dashboard</a> 
-      <a mat-list-item routerLink="AddEmployeeComponent" style="height: 60px;"><mat-icon>copyright</mat-icon>Add Employee</a>
-      <a mat-list-item  routerLink="EmployeeDetailsComponent" style="height: 60px;"><mat-icon>contact_support</mat-icon>Employee Details</a>
-      <a mat-list-item   style="height: 60px;"><mat-icon>contact_support</mat-icon>Employee Register</a>  
-      <a mat-list-item style="height: 60px;"><mat-icon>delete</mat-icon>Attendance</a> 
-      <a mat-list-item ><mat-icon>done</mat-icon>Feedback</a> 
-    </mat-nav-list> 
+      <mat-nav-list style="width: 200px;">
+        <a mat-list-item style="height: 60px;">
+          <mat-icon>dashboard</mat-icon>Dashboard
+        </a>
+        <a mat-list-item routerLink="AddEmployeeComponent" style="height: 60px;">
+          <mat-icon>copyright</mat-icon>Add Employee
+        </a>
+        <a mat-list-item routerLink="EmployeeDetailsComponent" style="height: 60px;">
+          <mat-icon>contact_support</mat-icon>Employee Details
+        </a>
+        <a mat-list-item routerLink="DepartmentComponent" style="height: 60px;">
+          <mat-icon>contact_support</mat-icon>Department
+        </a>
+        <a mat-list-item routerLink="LogoutComponent" style="height: 60px;">
+          <mat-icon>logout</mat-icon>LogOut
+        </a>
+
+      </mat-nav-list>
+
     </mat-sidenav>
     <mat-sidenav-content>
       <p style="height: 90vh">
-      <router-outlet></router-outlet>
-    </p>
-      </mat-sidenav-content>
+        <router-outlet></router-outlet>
+      </p>
+    </mat-sidenav-content>
   </mat-sidenav-container>
 </p>
