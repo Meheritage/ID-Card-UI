@@ -42,7 +42,7 @@
                 </button>
             </td>
             <td style="align-items: center;" >
-                <button type="button" mat-button (click)="printClick(dataItem.EmpID)" > 
+                <button type="button" mat-button [routerLink]="['/PrintComponent']" [queryParams]="{prop: dataItem.EmpID}" > 
                     <mat-icon>print</mat-icon>
                 </button>
             </td>

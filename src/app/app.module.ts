@@ -16,7 +16,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatRadioModule } from '@angular/material/radio';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
-import { AgGridModule } from 'ag-grid-angular';
+import { AgGridModule } from 'ag-grid-angular'; 
 import { EmployeeDetailsComponent } from './employee-details/employee-details.component';
 import { SharedService } from './shared.service';
 
@@ -26,6 +26,8 @@ import { AddEmployeeComponent } from './add-employee/add-employee.component';
 import { UpdateEmployeeComponent } from './update-employee/update-employee.component';
 import { DepartmentComponent } from './department/department.component';
 import { LogoutComponent } from './logout/logout.component';
+import { PrintComponent } from './print/print.component'; 
+import { NgxPrintModule } from "ngx-print";
 
 
 const routes: Routes = [
@@ -38,8 +40,8 @@ const routes: Routes = [
     AddEmployeeComponent,
     UpdateEmployeeComponent,
     DepartmentComponent,
-    LogoutComponent
-
+    LogoutComponent,
+    PrintComponent
   ],
   imports: [
     BrowserModule,
@@ -61,7 +63,8 @@ const routes: Routes = [
     MatToolbarModule,
     MatSidenavModule,
     ReactiveFormsModule,
-    AgGridModule.withComponents([])
+    AgGridModule.withComponents([]),
+    NgxPrintModule
   ],
   providers: [SharedService],
   bootstrap: [AppComponent]

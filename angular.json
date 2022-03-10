@@ -17,6 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
+            "allowedCommonJsDependencies": ["lodash"],
             "outputPath": "dist/first-app",
             "index": "src/index.html",
             "main": "src/main.ts",
@@ -67,6 +68,7 @@
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
+          
           "configurations": {
             "production": {
               "browserTarget": "first-app:build:production"

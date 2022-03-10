@@ -1,0 +1,44 @@
+.pdfstyle{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size:medium;
+    color: rgb(0, 0, 0);
+    position:absolute;
+}
+
+.empsty{
+    
+    top: 203px;
+    left: 280px;
+}
+.depsty{
+   
+    top: 241px;
+    left: 280px;
+}
+.bgsty{
+   
+    top: 512px;
+    left: 120px;
+}
+.phsty{
+    
+    top: 478px;
+    left: 120px;
+}
+.dobsty{
+    
+    top: 443px;
+    left: 120px;
+}
+.addsty{
+   
+    top: 548px;
+    left: 120px;
+    max-width: 400px;
+}
+.clsi{
+    position: absolute;
+    left: 34px;
+    top: 130px;
+
+}
