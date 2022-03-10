@@ -1,0 +1,81 @@
+<br>
+
+<div>
+    <mat-form-field style="width:30%;margin-left:10%">
+        <mat-label> Department</mat-label>
+        <mat-select [(ngModel)]="depselected" name="Department">
+            <mat-option *ngFor="let n of Department" [value]="n.DepID">{{ n.Name }}</mat-option>
+        </mat-select>
+    </mat-form-field>
+
+
+    <button type="button" class="editbutton" mat-button (click)="edit(depselected)">Edit</button>
+</div>
+<br><br><br><br><br><br><br>
+<div *ngIf="dep_hide">
+    <form #form="ngForm" (ngSubmit)="OnSubmit(form.value)">
+
+
+
+        <mat-form-field style="width:30%;margin-left:10%">
+            <mat-label>Code</mat-label>
+            <input matInput name="Code" #code="ngModel" ngModel required>
+            <small class="form-text text-muted" *ngIf="code.touched && !code.valid">This field is required*</small>
+        </mat-form-field>
+        <br>
+
+        <mat-form-field style="width:30%;margin-left:10%">
+            <mat-label>Department Name</mat-label>
+            <input matInput name="Name" #name="ngModel" ngModel required>
+            <small class="form-text text-muted" *ngIf="name.touched && !name.valid">This field is required*</small>
+        </mat-form-field>
+
+        <br>
+
+        <mat-form-field style="width:30%;margin-left:10%">
+            <mat-label>Description</mat-label>
+            <input matInput name="Description" #description="ngModel" ngModel required>
+            <small class="form-text text-muted" *ngIf="description.touched && !description.valid">This field is
+                required*</small>
+        </mat-form-field>
+        <br>
+        <button type="submit" name="save" class="regbutton" mat-raised-button [disabled]="!form.valid">Add</button>
+    </form>
+</div>
+
+
+
+<div>
+    <form #frm="ngForm" (ngSubmit)="update(frm.value)" *ngFor="let Dfd of DepDetails">
+        <mat-form-field style="width:30%;margin-left:10%" hidden>
+            <mat-label>ID</mat-label>
+            <input matInput name="DepID" [(ngModel)]="Dfd.DepID">
+
+        </mat-form-field>
+        <br>
+
+        <mat-form-field style="width:30%;margin-left:10%">
+            <mat-label>Code</mat-label>
+            <input matInput name="Code" #code="ngModel" [(ngModel)]="Dfd.Code" required>
+            <small class="form-text text-muted" *ngIf="code.touched && !code.valid">This field is required*</small>
+        </mat-form-field>
+        <br>
+
+        <mat-form-field style="width:30%;margin-left:10%">
+            <mat-label>Department Name</mat-label>
+            <input matInput name="Name" #name="ngModel" [(ngModel)]="Dfd.Name" required>
+            <small class="form-text text-muted" *ngIf="name.touched && !name.valid">This field is required*</small>
+        </mat-form-field>
+
+        <br>
+
+        <mat-form-field style="width:30%;margin-left:10%">
+            <mat-label>Description</mat-label>
+            <input matInput name="Description" #description="ngModel" [(ngModel)]="Dfd.Description" required>
+            <small class="form-text text-muted" *ngIf="description.touched && !description.valid">This field is
+                required*</small>
+        </mat-form-field>
+        <br>
+        <button type="submit" name="save" class="regbutton" mat-raised-button [disabled]="!frm.valid">Update</button>
+    </form>
+</div>

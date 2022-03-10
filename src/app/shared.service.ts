@@ -8,36 +8,58 @@ import { Observable } from 'rxjs';
 })
 export class SharedService {
 
-readonly APIUrl="http://localhost:57823/api/employee/";
-readonly photoUrl="http://localhost:57823/Photos/"; 
+  readonly APIUrl = "http://localhost:57823/api/employee/";
+  readonly photoUrl = "http://localhost:57823/Photos/";
+  readonly DepUrl = "http://localhost:57823/api/department/";
 
-  constructor(private http:HttpClient) { }
+  constructor(private http: HttpClient) { }
 
-  getEmpList():Observable<any[]>{
+  getEmpList(): Observable<any[]> {
     return this.http.get<any>(this.APIUrl);
   }
 
   getEmp(id: string): Observable<any> {
-    return this.http.get<any>(this.APIUrl+id);
-  } 
-
-  addEmployee(emp: any){ 
-     return this.http.post(this.APIUrl,emp);
+    return this.http.get<any>(this.APIUrl + id);
   }
 
-  updateEmployee(emp: any){ 
-    return this.http.put(this.APIUrl,emp);
+  addEmployee(emp: any) {
+    return this.http.post(this.APIUrl, emp);
   }
 
-  deleteEmployee(emp: any){ 
-    return this.http.delete(this.APIUrl+emp);
+  updateEmployee(emp: any) {
+    return this.http.put(this.APIUrl, emp);
   }
 
-  UploadPhoto(val:any){
-    return this.http.post(this.APIUrl+'savefile',val);
+  deleteEmployee(emp: any) {
+    return this.http.delete(this.APIUrl + emp);
   }
 
-  getAllDepartmentNames():Observable<any[]>{
-    return this.http.get<any[]>(this.APIUrl+'GetaAllDepartmentName')
+  UploadPhoto(val: any) {
+    return this.http.post(this.APIUrl + 'savefile', val);
   }
+
+  getAllDepartmentNames(): Observable<any[]> {
+    return this.http.get<any[]>(this.APIUrl + 'GetaAllDepartmentName')
+  }
+
+  addDepartment(dep: any) {
+    return this.http.post(this.DepUrl, dep);
+  }
+
+  getDep(name: string): Observable<any> {
+    return this.http.get<any>(this.DepUrl + name);
+  }
+
+  updateDepartment(dep: any) {
+    return this.http.put(this.DepUrl, dep);
+  }
+
+  getAllDepartment(): Observable<any[]> {
+    return this.http.get<any[]>(this.DepUrl + 'GetaAllDepartmentName')
+  }
+
+  getDepartment(id: string): Observable<any> {
+    return this.http.get<any>(this.DepUrl + id);
+  }
+
 }
