@@ -37,24 +37,24 @@
     font-size:medium;
     color: rgb(0, 0, 0);
     position:absolute;
-    top: 182px;
-    left: 380px;
+    top: 172px;
+    left: 360px;
 }
 .idsty{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size:medium;
     color: rgb(0, 0, 0);
     position:absolute;
-    top: 257px;
-    left: 380px;
+    top: 243px;
+    left: 360px;
 }
 .depsty{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size:medium;
     position: absolute;
     color: black;
-    top: 219px;
-    left: 380px;
+    top: 207px;
+    left: 360px;
 }
 .bgsty{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -62,7 +62,7 @@
     position: absolute;
     color: black;
     top: 516px;
-    left: 220px;
+    left: 210px;
 }
 .phsty{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -70,7 +70,7 @@
     position: absolute;
     color: black;
     top: 481.7px;
-    left: 220px;
+    left: 210px;
 }
 .dobsty{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -78,7 +78,7 @@
     position: absolute;
     color: black;
     top: 447px;
-    left: 220px;
+    left: 210px;
 }
 .addsty{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -86,7 +86,7 @@
     position: absolute;
     color: black;
     top: 552px;
-    left: 220px;
+    left: 210px;
     max-width: 400px;
 }
 
