@@ -7,16 +7,20 @@
 
 .empsty{
     
-    top: 203px;
+    top: 178px;
     left: 280px;
 }
 .depsty{
    
-    top: 241px;
+    top: 215px;
     left: 280px;
 }
+.idsty{
+    top:253px;
+    left:280px;
+}
 .bgsty{
-   
+
     top: 512px;
     left: 120px;
 }

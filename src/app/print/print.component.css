@@ -23,11 +23,12 @@
 .clfi{
     position: relative;
     top: 7px ;
+    left: 100px;
 }
 
 .clsi{
     position: absolute;
-    left: 26.5px;
+    left: 126.5px;
     top: 130px;
 
 }
@@ -36,16 +37,24 @@
     font-size:medium;
     color: rgb(0, 0, 0);
     position:absolute;
-    top: 207px;
-    left: 280px;
+    top: 182px;
+    left: 380px;
+}
+.idsty{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size:medium;
+    color: rgb(0, 0, 0);
+    position:absolute;
+    top: 257px;
+    left: 380px;
 }
 .depsty{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size:medium;
     position: absolute;
     color: black;
-    top: 245px;
-    left: 280px;
+    top: 219px;
+    left: 380px;
 }
 .bgsty{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -53,7 +62,7 @@
     position: absolute;
     color: black;
     top: 516px;
-    left: 120px;
+    left: 220px;
 }
 .phsty{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -61,7 +70,7 @@
     position: absolute;
     color: black;
     top: 481.7px;
-    left: 120px;
+    left: 220px;
 }
 .dobsty{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -69,7 +78,7 @@
     position: absolute;
     color: black;
     top: 447px;
-    left: 120px;
+    left: 220px;
 }
 .addsty{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -77,7 +86,7 @@
     position: absolute;
     color: black;
     top: 552px;
-    left: 120px;
+    left: 220px;
     max-width: 400px;
 }
 
