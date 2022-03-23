@@ -22,12 +22,16 @@ export class DepartmentComponent implements OnInit {
 
     console.log(frm);
     this.service.addDepartment(frm).subscribe(result => { alert(result.toString()) });
+    this.reload();
 
   }
   update(frm: any) {
     console.log(frm)
     this.service.updateDepartment(frm).subscribe(result => { alert(result.toString()) });
-
+    this.reload();
+  }
+  reload() {
+    location.reload();
   }
   edit(val: any) {
     console.log(val);
@@ -35,6 +39,7 @@ export class DepartmentComponent implements OnInit {
       this.DepDetails = val;
       this.dep_hide = false;
       console.log(this.DepDetails);
+
     });
 
   }

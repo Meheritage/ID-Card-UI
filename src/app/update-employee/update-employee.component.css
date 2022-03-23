@@ -9,6 +9,19 @@
     
 }
 
+.backbtn{
+    font-size: 22px;
+    background-color: white;
+    color: black;
+    left: 5mm;
+    width: 150px;
+    height:50px ;
+}
+.backbtn:hover{
+    background-color: red;
+    color: white;
+}
+
 .regbutton:hover{
     background-color: red;
     color: white;
