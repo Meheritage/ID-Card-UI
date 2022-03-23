@@ -3,13 +3,13 @@
   <div *ngFor="let dataItem of employee" id="content">
     <img class="clfi" [src]=IDCardpath height="688px" width="487px">
     <img class="clsi" [src]="PhotoURL+dataItem.PhotoName" height="145" width="134">
-    <h1 class="idsty pdfstyle">{{dataItem.EmpID}}</h1>
-    <h1 class="empsty pdfstyle">{{dataItem.EmpName}}</h1>
-    <h1 class="depsty pdfstyle">{{dataItem.Department}}</h1>
-    <h1 class="bgsty pdfstyle">{{dataItem.BloodGroup}}</h1>
-    <h1 class="phsty pdfstyle">{{dataItem.Phone}}</h1>
-    <h1 class="dobsty pdfstyle">{{dataItem.DOB}}</h1>
-    <h1 class="addsty pdfstyle">{{dataItem.EmpAddress}}</h1>
+    <h1 class="idsty pdfstyle previewstyle">{{dataItem.EmpID}}</h1>
+    <h1 class="empsty pdfstyle previewstyle">{{dataItem.EmpName}}</h1>
+    <h1 class="depsty pdfstyle previewstyle">{{dataItem.Department}}</h1>
+    <h1 class="bgsty pdfstyle previewstyle">{{dataItem.BloodGroup}}</h1>
+    <h1 class="phsty pdfstyle previewstyle">{{dataItem.Phone}}</h1>
+    <h1 class="dobsty pdfstyle previewstyle">{{dataItem.DOB}}</h1>
+    <h1 class="addsty pdfstyle previewstyle">{{dataItem.EmpAddress}}</h1>
   </div>
 
   <button styleSheetFile="assets/pdf.css" printSectionId="content" class="regbutton" mat-raised-button
