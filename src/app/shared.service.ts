@@ -11,6 +11,7 @@ export class SharedService {
   readonly APIUrl = "http://localhost:57823/api/employee/";
   readonly photoUrl = "http://localhost:57823/Photos/";
   readonly DepUrl = "http://localhost:57823/api/department/";
+  readonly LoginUrl="http://localhost:57823/api/login/CheckUser";
 
   constructor(private http: HttpClient) { }
 
@@ -62,4 +63,7 @@ export class SharedService {
     return this.http.get<any>(this.DepUrl + id);
   }
 
+  CheckUser(un:any): Observable<any>{
+    return this.http.post<any>(this.LoginUrl,un);
+  }
 }

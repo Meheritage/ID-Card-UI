@@ -1,3 +1,5 @@
+<!-- <router-outlet routerLink="LoginComponent"></router-outlet> -->
+
 <mat-toolbar style="background-color: brown;" class="mat-elevation-z5">
   <mat-toolbar-row>
     <span>My App</span>
@@ -16,7 +18,10 @@
   <mat-sidenav-container>
     <mat-sidenav mode="side" opened>
       <mat-nav-list style="width: 200px;">
-        <a mat-list-item style="height: 60px;">
+        <!-- <a mat-list-item routerLink="LoginComponent" style="height: 60px;">
+          <mat-icon>login</mat-icon>Login
+        </a> -->
+        <a mat-list-item routerLink="DashboardComponent" style="height: 60px;">
           <mat-icon>dashboard</mat-icon>Dashboard
         </a>
         <a mat-list-item routerLink="AddEmployeeComponent" style="height: 60px;">

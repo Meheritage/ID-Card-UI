@@ -1,3 +1,4 @@
+<html style="background-color:black ;">
 <form #frm="ngForm" (ngSubmit)="OnSubmit(frm.value)" *ngFor="let dataItem of employee">
 
    <mat-form-field style="width:30%;margin-left:10%;margin-top: 10%;">
@@ -100,3 +101,4 @@
       (click)="onclick(dataItem.PhotoName)">Update</button>
 
 </form>
+</html>

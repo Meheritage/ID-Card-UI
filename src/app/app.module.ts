@@ -16,19 +16,20 @@ import { MatInputModule } from '@angular/material/input';
 import { MatRadioModule } from '@angular/material/radio';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
-import { AgGridModule } from 'ag-grid-angular'; 
+import { AgGridModule } from 'ag-grid-angular';
 import { EmployeeDetailsComponent } from './employee-details/employee-details.component';
 import { SharedService } from './shared.service';
-
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AddEmployeeComponent } from './add-employee/add-employee.component';
 import { UpdateEmployeeComponent } from './update-employee/update-employee.component';
 import { DepartmentComponent } from './department/department.component';
 import { LogoutComponent } from './logout/logout.component';
-import { PrintComponent } from './print/print.component'; 
+import { PrintComponent } from './print/print.component';
 import { NgxPrintModule } from "ngx-print";
-
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { NgChartsModule, } from 'ng2-charts';
+import { LoginComponent } from './login/login.component';
 
 const routes: Routes = [
 
@@ -41,7 +42,9 @@ const routes: Routes = [
     UpdateEmployeeComponent,
     DepartmentComponent,
     LogoutComponent,
-    PrintComponent
+    PrintComponent,
+    DashboardComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -64,7 +67,8 @@ const routes: Routes = [
     MatSidenavModule,
     ReactiveFormsModule,
     AgGridModule.withComponents([]),
-    NgxPrintModule
+    NgxPrintModule,
+    NgChartsModule
   ],
   providers: [SharedService],
   bootstrap: [AppComponent]

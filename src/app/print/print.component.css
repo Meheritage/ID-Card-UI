@@ -12,7 +12,7 @@
     background-color: rgb(13, 18, 99);
     color: rgb(255, 251, 251);
     position: absolute;
-    
+
 }
 
 .regbutton:hover{
@@ -36,7 +36,7 @@
     font-size:medium;
     color: rgb(0, 0, 0);
     position:absolute;
-    top: 207px;
+    top: 171px;
     left: 280px;
 }
 .depsty{
@@ -44,8 +44,16 @@
     font-size:medium;
     position: absolute;
     color: black;
-    top: 245px;
+    top: 207px;
     left: 280px;
+}
+.empidsty{
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size:medium;
+  position: absolute;
+  color: black;
+  top: 245px;
+  left: 280px;
 }
 .bgsty{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;

@@ -6,32 +6,35 @@
 }
 
 .empsty{
-    
-    top: 203px;
+
+    top: 170px;
     left: 280px;
 }
 .depsty{
-   
+  top: 203px;
+  left: 280px;
+}
+.empidsty{
     top: 241px;
     left: 280px;
 }
 .bgsty{
-   
+
     top: 512px;
     left: 120px;
 }
 .phsty{
-    
+
     top: 478px;
     left: 120px;
 }
 .dobsty{
-    
+
     top: 443px;
     left: 120px;
 }
 .addsty{
-   
+
     top: 548px;
     left: 120px;
     max-width: 400px;
